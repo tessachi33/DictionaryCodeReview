@@ -3,8 +3,4 @@
 #foreach ($definition in $word.getDefinition())
   <li><a href="/definition/$definition.getId()">$definition.getDefinition()</a></li>
 #end
-</ul>
-#else
-<h1> definition not found </h1>
-#end
 <a href="/words/$word.getId()/definitions/new">Add a new definition</a>
