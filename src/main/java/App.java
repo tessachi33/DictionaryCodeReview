@@ -9,6 +9,12 @@ public class App {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
+        // get("/", (request, response) -> {
+        //   HashMap<String, Object> model = new HashMap<String, Object>();
+        //   model.put("template", "templates/index.vtl");
+        //   return new ModelAndView(model, layout);
+        // }, new VelocityTemplateEngine());
+
     get("/", (request, response) -> {
      HashMap<String, Object> model = new HashMap<String, Object>();
      model.put("words", Word.all());
@@ -32,22 +38,21 @@ public class App {
    }, new VelocityTemplateEngine());
 
 
- //    get("/addressbooks/:id", (request, response) -> {
- //    HashMap<String, Object> model = new HashMap<String, Object>();
- //    model.put("addressbook", AddressBook.find(Integer.parseInt(request.params(":id"))));
- //    //model.put("contacts", Category.all());
- //    model.put("template", "templates/addressbook.vtl");
- //    return new ModelAndView(model, layout);
- //  }, new VelocityTemplateEngine());
- //
- //  get("/addressbooks/:id/contacts/new", (request, response) -> {
- //     HashMap<String, Object> model = new HashMap<String, Object>();
- //     model.put("addressbook", AddressBook.find(Integer.parseInt(request.params(":id"))));
- //     model.put("template", "templates/addressbook-contact-form.vtl");
- //     return new ModelAndView(model, layout);
- //   }, new VelocityTemplateEngine());
- //
- //
+    get("/words/:id", (request, response) -> {
+    HashMap<String, Object> model = new HashMap<String, Object>();
+    model.put("word", Word.find(Integer.parseInt(request.params(":id"))));
+    model.put("template", "templates/word.vtl");
+    return new ModelAndView(model, layout);
+  }, new VelocityTemplateEngine());
+
+  get("/words/:id/definitions/new", (request, response) -> {
+     HashMap<String, Object> model = new HashMap<String, Object>();
+     model.put("word", Word.find(Integer.parseInt(request.params(":id"))));
+     model.put("template", "templates/create-a-word-form.vtl");
+     return new ModelAndView(model, layout);
+   }, new VelocityTemplateEngine());
+
+
  //   post("/contacts", (request, response) -> {
  //     HashMap<String, Object> model = new HashMap<String, Object>();
  //     AddressBook addressbook = AddressBook.find(Integer.parseInt(request.queryParams("addressbookId")));

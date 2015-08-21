@@ -21,6 +21,16 @@ public class AppTest extends FluentTest{
  //  @Test
  //  public void rootTest() {
  //   goTo("http://localhost:4567/");
- //   assertThat(pageSource()).contains("Word");
+ //   assertThat(pageSource()).contains("Online dictionary creator");
  // }
+ // @Test
+ // public void definitionIsCreatedTest() {
+ //   goTo("http://localhost:4567/");
+ //   click("a", withText("Add a new definition"));
+ //   fill("#definition").with("definition here");
+ //   submit(".btn");
+ //   assertThat(pageSource()).contains("Your definition has been saved.");
+ // }
+
+
 }
