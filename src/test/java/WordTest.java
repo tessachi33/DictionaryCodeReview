@@ -30,14 +30,14 @@ public class WordTest {
         assertTrue(Word.all().contains(testWord1));
         assertTrue(Word.all().contains(testWord2));
       }
+
+      @Test
+      public void clear_removesAllWordInstancesFromMemory() {
+        Word testWord = new Word("dog");
+        Word.clear();
+        assertEquals(Word.all().size(), 0);
+      }
   
-  //     @Test
-  //     public void clear_removesAllWordInstancesFromMemory() {
-  //       Word testWord = new Word("dog");
-  //       Word.clear();
-  //       assertEquals(Word.all().size(), 0);
-  //     }
-  //
   //   @Test
   //   public void find_returnsWordWithSameId() {
   //     Word testWord = new Word("cat");
