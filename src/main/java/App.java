@@ -22,16 +22,16 @@ public class App {
      return new ModelAndView(model, layout);
    }, new VelocityTemplateEngine());
 
- //   post("/addressbooks", (request, response) -> {
- //     HashMap<String, Object> model = new HashMap<String, Object>();
- //     String userName = request.queryParams("userName");
- //     AddressBook newAddressBook = new AddressBook(userName);
- //     model.put("addressbook", newAddressBook);
- //     model.put("template", "templates/success.vtl");
- //     return new ModelAndView(model, layout);
- //   }, new VelocityTemplateEngine());
- //
- //
+   post("/words", (request, response) -> {
+     HashMap<String, Object> model = new HashMap<String, Object>();
+     String userWord = request.queryParams("userWord");
+     Word newWord = new Word(userWord);
+     model.put("word", newWord);
+     model.put("template", "templates/success.vtl");
+     return new ModelAndView(model, layout);
+   }, new VelocityTemplateEngine());
+
+
  //    get("/addressbooks/:id", (request, response) -> {
  //    HashMap<String, Object> model = new HashMap<String, Object>();
  //    model.put("addressbook", AddressBook.find(Integer.parseInt(request.params(":id"))));
