@@ -43,12 +43,12 @@ public class WordTest {
       Word testWord = new Word("cat");
       assertEquals(Word.find(testWord.getId()), testWord);
     }
-  
-  //   @Test
-  //   public void addDefinition_addsDefinitionToList() {
-  //     Word testWord = new Word ("Fox");
-  //     Definition testDefinition = new Definition("A kitsune in Shinto beliefs");
-  //     testWord.adddefinition(testDefinition);
-  //     assertTrue(testWord.getDefinitions().contains(testDefinition));
-  //   }
+
+    @Test
+    public void addDefinition_addsDefinitionToList() {
+      Word testWord = new Word ("Fox");
+      Definition testDefinition = new Definition("A kitsune in Shinto beliefs");
+      testWord.adddefinition(testDefinition);
+      assertTrue(testWord.getDefinitions().contains(testDefinition));
+    }
   }
