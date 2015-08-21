@@ -13,4 +13,13 @@ public class Definition {
       instances.add(this);
        mId = instances.size();
       }
+
+      public String getDefinition(){
+        return mDefinition;
+      }
+
+      public static ArrayList<Definition>all(){
+        return instances;
+      }
+
     }
