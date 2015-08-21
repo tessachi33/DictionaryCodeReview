@@ -34,14 +34,14 @@ public class App {
    get("/words/:id", (request, response) -> {
  	    HashMap<String, Object> model = new HashMap<String, Object>();
  	    model.put("word", Word.find(Integer.parseInt(request.params(":id"))));
- 	    model.put("template", "templates/word-definition-form.vtl");
+ 	    model.put("template", "templates/word.vtl");
  	    return new ModelAndView(model, layout);
  	  }, new VelocityTemplateEngine());
 
   get("/words/:id/definition/new", (request, response) -> {
      HashMap<String, Object> model = new HashMap<String, Object>();
      model.put("word", Word.find(Integer.parseInt(request.params(":id"))));
-     model.put("template", "templates/definition.vtl");
+     model.put("template", "templates/word-definition-form.vtl");
      return new ModelAndView(model, layout);
    }, new VelocityTemplateEngine());
 
@@ -53,7 +53,7 @@ public class App {
       Definition newDefinition = new Definition(description);
       word.addDefinition(newDefinition);
       model.put("word", word);
-      model.put("template", "templates/success.vtl");
+      model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
    }, new VelocityTemplateEngine());
 
