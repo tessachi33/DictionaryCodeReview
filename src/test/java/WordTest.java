@@ -37,13 +37,13 @@ public class WordTest {
         Word.clear();
         assertEquals(Word.all().size(), 0);
       }
+
+    @Test
+    public void find_returnsWordWithSameId() {
+      Word testWord = new Word("cat");
+      assertEquals(Word.find(testWord.getId()), testWord);
+    }
   
-  //   @Test
-  //   public void find_returnsWordWithSameId() {
-  //     Word testWord = new Word("cat");
-  //     assertEquals(Word.find(testWord.getId()), testWord);
-  //   }
-  //
   //   @Test
   //   public void addDefinition_addsDefinitionToList() {
   //     Word testWord = new Word ("Fox");
