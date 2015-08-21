@@ -48,7 +48,7 @@ public class WordTest {
     public void addDefinition_addsDefinitionToList() {
       Word testWord = new Word ("Fox");
       Definition testDefinition = new Definition("A kitsune in Shinto beliefs");
-      testWord.adddefinition(testDefinition);
+      testWord.addDefinition(testDefinition);
       assertTrue(testWord.getDefinitions().contains(testDefinition));
     }
   }

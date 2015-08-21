@@ -26,7 +26,7 @@ public String getUserWord(){
    return mDefinition;
  }
 
- public void adddefinition(Definition definition){
+ public void addDefinition(Definition definition){
    mDefinition.add(definition);
  }
  public static ArrayList<Word> all(){
