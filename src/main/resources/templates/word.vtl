@@ -1,6 +1,11 @@
-#if ($word.getDefinition())
 
-#foreach ($definition in $word.getDefinition())
-  <li><a href="/definition/$definition.getId()">$definition.getDefinition()</a></li>
+#if ($word.getDefinitions() == [])
+<br>
+<br>
+<p>Add a new definition if you don't see one!</p>
 #end
+<br>
 <a href="/words/$word.getId()/definitions/new">Add a new definition</a>
+<br>
+<br>
+<a href="/">Home</a>
