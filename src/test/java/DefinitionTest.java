@@ -27,14 +27,14 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("an animal with fur");
    assertEquals(Definition.all().size(), myDefinition.getId());
    }
+
+   @Test
+   public void find_returnsDefinitionWithSameId_secondTask() {
+     Definition myDefinition1 = new Definition("An animal with scales");
+     Definition myDefinition2 = new Definition("an animal with gills");
+    assertEquals(Definition.find(myDefinition2.getId()), myDefinition2);
+    }
   
-  //  @Test
-  //  public void find_returnsDefinitionWithSameId_secondTask() {
-  //    Definition myDefinition1 = new Definition("An animal with scales");
-  //    Definition myDefinition2 = new Definition("an animal with gills");
-  //   assertEquals(Definition.find(myDefinition2.getId()), myDefinition2);
-  //   }
-  //
   // @Test
   // public void find_returnsNullWhenNoDefinitionFound_null() {
   //   assertTrue(Definition.find(999) == null);
