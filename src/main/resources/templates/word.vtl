@@ -1,11 +1,18 @@
 
-#if ($word.getDefinitions() == [])
+#if ($word.getDefinitions() == $arr)
 <br>
 <br>
-<p>Add a new definition if you don't see one!</p>
+<p>Add a new definition if you don't see one</p>
 #end
 <br>
 <a href="/words/$word.getId()/definitions/new">Add a new definition</a>
-<br>
+#if ($word.getDefinitions() != $arr)
+<h3>Here are all the definitions:</h3>
+#end
+<ul>
+#foreach ($definition in $word.getDefinitions())
+<li><a href="/definition/$definition.getId()">$definition.getDefinitions()</a></li>
+#end
+</ul>
 <br>
 <a href="/">Home</a>
