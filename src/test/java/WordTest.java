@@ -22,15 +22,15 @@ public class WordTest {
       Word testWord = new Word("dog");
       assertTrue(testWord.getDefinitions() instanceof ArrayList);
     }
+
+    @Test
+      public void all_returnsAllInstancesOfWord_true() {
+        Word testWord1 = new Word("dog");
+        Word testWord2 = new Word("Alex");
+        assertTrue(Word.all().contains(testWord1));
+        assertTrue(Word.all().contains(testWord2));
+      }
   
-  //   @Test
-  //     public void all_returnsAllInstancesOfWord_true() {
-  //       Word testWord1 = new Word("dog");
-  //       Word testWord2 = new Word("Alex");
-  //       assertTrue(Word.all().contains(testWord1));
-  //       assertTrue(Word.all().contains(testWord2));
-  //     }
-  //
   //     @Test
   //     public void clear_removesAllWordInstancesFromMemory() {
   //       Word testWord = new Word("dog");
