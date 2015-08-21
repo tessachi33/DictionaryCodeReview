@@ -16,13 +16,13 @@ public class WordTest {
       Word testWord = new Word("Dog");
       assertTrue(Word.all().size() == testWord.getId());
     }
+
+    @Test
+    public void getWord_initiallyReturnsEmptyArrayList() {
+      Word testWord = new Word("dog");
+      assertTrue(testWord.getDefinitions() instanceof ArrayList);
+    }
   
-  //   @Test
-  //   public void getWord_initiallyReturnsEmptyArrayList() {
-  //     Word testWord = new Word("dog");
-  //     assertTrue(testWord.getDefinitions() instanceof ArrayList);
-  //   }
-  //
   //   @Test
   //     public void all_returnsAllInstancesOfWord_true() {
   //       Word testWord1 = new Word("dog");
