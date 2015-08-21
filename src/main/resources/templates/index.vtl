@@ -1,1 +1,9 @@
+<h1>Online dictionary creator</h1>
 
+
+<p><a href="/words/new">Add a new word<a></p>
+
+
+  #foreach($word in $words)
+  <h3><a href="/wrds/$word.getId()">$word.getUserWord()</a></h3>
+  #end
