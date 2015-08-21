@@ -5,12 +5,12 @@ import static org.junit.Assert.*;
 
 public class WordTest {
 
-  // @Test
-  // public void getUserName_returnsUserName_true() {
-  //   AddressBook testAddressBook = new AddressBook("Teresa");
-  //   assertEquals("Teresa", testAddressBook.getUserName());
-  // }
-  //
+  @Test
+  public void getUserWord_returnsUserWord_true() {
+    Word testWord = new Word("dog");
+    assertEquals("dog", testWord.getUserWord());
+  }
+
   //   @Test
   //   public void getId_returnsWordId() {
   //     Word testWord = new Word("Dog");
