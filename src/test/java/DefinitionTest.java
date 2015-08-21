@@ -34,17 +34,17 @@ public class DefinitionTest {
      Definition myDefinition2 = new Definition("an animal with gills");
     assertEquals(Definition.find(myDefinition2.getId()), myDefinition2);
     }
-  
-  // @Test
-  // public void find_returnsNullWhenNoDefinitionFound_null() {
-  //   assertTrue(Definition.find(999) == null);
-  //   }
-  //
-  // @Test
-  // public void clear_emptiesAllDefinitionFromArrayList() {
-  //   Definition myDefinition = new Definition("A definition here");
-  //   Definition.clear();
-  //   assertEquals(Definition.all().size(), 0);
-  // }
+
+  @Test
+  public void find_returnsNullWhenNoDefinitionFound_null() {
+    assertTrue(Definition.find(999) == null);
+    }
+
+  @Test
+  public void clear_emptiesAllDefinitionFromArrayList() {
+    Definition myDefinition = new Definition("A definition here");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
 
 }

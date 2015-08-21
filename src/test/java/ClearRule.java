@@ -6,7 +6,7 @@ public class ClearRule extends ExternalResource {
 
   protected void after() {
   //   Word.clear();
-  //   Definition.clear();
+     Definition.clear();
    }
 
 }
