@@ -1,11 +1,10 @@
-<h1>Add a new word here:</h1>
+<h1>Success!</h1>
+#if ($Definition)
+Your definition has been saved.
 
-<form action="/words" method="post">
+#elseif ($word)
+Your word has been saved.
 
-  <div class="form-group">
-    <label for="userWord">Add your word</label>
-    <input id="userWord" name="userWord" type="text" class="form-control">
-  </div>
+#end
 
-  <button type="submit" class="btn btn-success">Add word</button>
-</form>
+<a href="/">View All words</a>
