@@ -9,13 +9,13 @@ public class App {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
- //    get("/", (request, response) -> {
- //     HashMap<String, Object> model = new HashMap<String, Object>();
- //     model.put("addressbooks", AddressBook.all());
- //     model.put("template", "templates/index.vtl");
- //     return new ModelAndView(model, layout);
- //   }, new VelocityTemplateEngine());
- //
+    get("/", (request, response) -> {
+     HashMap<String, Object> model = new HashMap<String, Object>();
+     model.put("words", Word.all());
+     model.put("template", "templates/index.vtl");
+     return new ModelAndView(model, layout);
+   }, new VelocityTemplateEngine());
+
  //   get("/addressbooks/new", (request, response) -> {
  //     HashMap<String, Object> model = new HashMap<String, Object>();
  //     model.put("template", "templates/addressbook-form.vtl");
