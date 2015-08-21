@@ -18,19 +18,18 @@ public class AppTest extends FluentTest{
   @ClassRule
   public static ServerRule server = new ServerRule();
 
- //  @Test
- //  public void rootTest() {
- //   goTo("http://localhost:4567/");
- //   assertThat(pageSource()).contains("Online dictionary creator");
- // }
+  @Test
+  public void rootTest() {
+   goTo("http://localhost:4567/");
+   assertThat(pageSource()).contains("dictionary");
+ }
  // @Test
- // public void definitionIsCreatedTest() {
+ // public void wordIsCreatedTest() {
  //   goTo("http://localhost:4567/");
- //   click("a", withText("Add a new definition"));
- //   fill("#definition").with("definition here");
+ //   click("a", withText("Add a new word"));
+ //   fill("#word").with("definition here");
  //   submit(".btn");
- //   assertThat(pageSource()).contains("Your definition has been saved.");
+ //   assertThat(pageSource()).contains("Your word has been saved.");
  // }
-
 
 }
