@@ -11,12 +11,12 @@ public class WordTest {
     assertEquals("dog", testWord.getUserWord());
   }
 
-  //   @Test
-  //   public void getId_returnsWordId() {
-  //     Word testWord = new Word("Dog");
-  //     assertTrue(Word.all().size() == testWord.getId());
-  //   }
-  //
+    @Test
+    public void getId_returnsWordId() {
+      Word testWord = new Word("Dog");
+      assertTrue(Word.all().size() == testWord.getId());
+    }
+  
   //   @Test
   //   public void getWord_initiallyReturnsEmptyArrayList() {
   //     Word testWord = new Word("dog");

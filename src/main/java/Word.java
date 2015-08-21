@@ -18,6 +18,19 @@ public Word(String userWord){
 public String getUserWord(){
   return mUserWord;
 }
+ public int getId(){
+   return mId;
+ }
 
+ public ArrayList<Definition> getDefinitions(){
+   return mDefinition;
+ }
+
+ public void adddefinition(Definition definition){
+   mDefinition.add(definition);
+ }
+ public static ArrayList<Word> all(){
+   return instances;
+ }
 
 }
